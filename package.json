@@ -1,0 +1,23 @@
+{
+  "name": "transferguard",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:web\"",
+    "dev:api": "npm --prefix apps/api run dev",
+    "dev:web": "npm --prefix apps/web run dev",
+    "build": "npm --prefix apps/api run build && npm --prefix apps/web run build",
+    "start": "npm --prefix apps/api run start",
+    "test": "npm run test:sdk && npm run test:acceptance && npm run test:blackbox",
+    "test:acceptance": "tsx --tsconfig apps/api/tsconfig.json apps/api/src/test-acceptance.ts",
+    "test:blackbox": "tsx --tsconfig apps/api/tsconfig.json apps/api/src/test-judge-blackbox.ts",
+    "test:sdk": "tsx --tsconfig apps/api/tsconfig.json apps/api/src/test-sdk.ts"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

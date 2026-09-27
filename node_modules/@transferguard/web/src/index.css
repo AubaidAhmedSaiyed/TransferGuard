@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#070a12] text-slate-100 antialiased font-sans;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
+  }
+}
+
+/* Atmospheric Soft Gradient Utilities (Infrastructure Startup Feel) */
+.bg-atmospheric-hero {
+  background: radial-gradient(120% 120% at 50% 0%, #151e33 0%, #0c1220 45%, #070a12 100%);
+}
+
+.bg-atmospheric-surface {
+  background: linear-gradient(180deg, rgba(20, 29, 48, 0.7) 0%, rgba(12, 17, 29, 0.9) 100%);
+}
+
+.bg-atmospheric-card {
+  background: linear-gradient(180deg, #0e1526 0%, #0a0f1c 100%);
+}
+
+.bg-atmospheric-card-subtle {
+  background: linear-gradient(180deg, #111a2e 0%, #0c1222 100%);
+}
+
+.bg-atmospheric-nav-active {
+  background: linear-gradient(180deg, #1e293b 0%, #141d2e 100%);
+}
+
+.bg-atmospheric-empty {
+  background: radial-gradient(100% 100% at 50% 10%, rgba(26, 38, 64, 0.4) 0%, rgba(10, 15, 26, 0.8) 100%);
+}
+
+/* Restrained decision accents */
+.decision-border-allow {
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
+.decision-border-verify {
+  border-color: rgba(245, 158, 11, 0.45);
+}
+
+.decision-border-block {
+  border-color: rgba(239, 68, 68, 0.45);
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070a12;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}

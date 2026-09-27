@@ -1,0 +1,17 @@
+services:
+  # Option A (Recommended): Unified Full-Stack Service (React + Express API in one service)
+  - type: web
+    name: transferguard-platform
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    region: oregon
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3001
+      - key: OLLAMA_HOST
+        value: http://localhost:11434
+      - key: OLLAMA_MODEL
+        value: qwen3:4b

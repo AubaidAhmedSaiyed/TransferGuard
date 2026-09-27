@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "paths": {
+      "@transferguard/types": ["../../packages/types/src/index.ts"],
+      "@transferguard/types/*": ["../../packages/types/src/*"],
+      "@transferguard/evidence-engine": ["../../packages/evidence-engine/src/index.ts"],
+      "@transferguard/decision-engine": ["../../packages/decision-engine/src/index.ts"],
+      "@transferguard/sdk": ["../../packages/sdk/src/index.ts"],
+      "@transferguard/integrations": ["../../packages/integrations/src/index.ts"]
+    }
+  },
+  "include": ["src/**/*", "../../packages/**/*"]
+}
